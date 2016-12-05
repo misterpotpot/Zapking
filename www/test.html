@@ -1,0 +1,20 @@
+<html>
+	<head>
+	</head>
+
+	<body>
+		<button onclick="test()">Test</button>
+		<div id="resultats"></div>
+	</body>
+
+	<script>
+		function test() {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', '/app/querry.php?key=1&nb=100', false);
+			xhr.send(null);
+			var resultat = xhr.responseText
+			var element = document.getElementbyId("resultats")
+			element.value = resultat;
+		}
+	</script>
+</html>
